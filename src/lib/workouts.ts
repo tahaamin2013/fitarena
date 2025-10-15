@@ -212,6 +212,35 @@ export function getWorkout(category: string): Exercise[] {
 
         image: "/straightdribble.gif",
       },
+                                    {
+        id: "push-pass-drill-1",
+        name: "Push Pass Drill 1",
+        duration: 120,
+
+        image: "/puspassdrill1.gif",
+      },
+                                     {
+        id: "push-pass-drill-2",
+        name: "Push Pass Drill 2",
+        duration: 120,
+
+        image: "/puspassdrill2.gif",
+      },
+      
+                                       {
+        id: "sweep-pass-drill",
+        name: "Sweep Pass Drill",
+        duration: 120,
+
+        image: "/sweeppassdrill.gif",
+      },
+                                       {
+        id: "full-ball-rotation",
+        name: "Full Ball Rotation",
+        duration: 120,
+
+        image: "/fullballrotation.gif",
+      },
       
 
 
