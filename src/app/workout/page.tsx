@@ -250,7 +250,7 @@ export default function WorkoutRunnerPage() {
   let __faAudioCtx: AudioContext | null = null
   function getAudioCtx() {
     if (typeof window === "undefined") return null
-    const Ctx: any = (window as any).AudioContext || (window as any).webkitAudioContext
+    const Ctx = (window.AudioContext || window.AudioContext)
     if (!Ctx) return null
     if (!__faAudioCtx) __faAudioCtx = new Ctx()
     return __faAudioCtx

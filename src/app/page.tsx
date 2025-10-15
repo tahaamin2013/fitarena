@@ -1,4 +1,5 @@
 import { CategoryGrid } from "@/components/category-grid"
+import Link from "next/link"
 
 export default function Page() {
   return (
@@ -12,14 +13,14 @@ export default function Page() {
                 Choose a focus area or start a full session. No sign-in required.
               </p>
             </div>
-            <a
+            <Link
               href="/run/all"
               className="inline-flex items-center justify-center h-11 px-6 rounded-full text-base md:text-lg"
               style={{ backgroundColor: "var(--background)", color: "var(--foreground)" }}
               aria-label="Start all workouts"
             >
               Start All
-            </a>
+            </Link>
           </div>
         </div>
       </section>

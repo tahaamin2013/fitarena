@@ -102,8 +102,8 @@ export default function RunPage({
 
   // Timers
   useEffect(() => {
-    let interval: any
-    let timeout: any
+    let interval: string | number | NodeJS.Timeout | undefined
+    let timeout: string | number | NodeJS.Timeout | undefined
 
     if (phase === "setup") {
       setRemaining(10)
@@ -281,7 +281,7 @@ export default function RunPage({
             {phase === "exercise" && (
               <>
                 <div className="mt-5 text-sm" style={{ color: "var(--muted-foreground)" }}>
-                  {String(current.duration - remaining).padStart(2, "0")}" /{String(current.duration).padStart(2, "0")}"
+                  {String(current.duration - remaining).padStart(2, "0")} /{String(current.duration).padStart(2, "0")}
                 </div>
                 <h2 className="mt-1 text-2xl md:text-3xl font-extrabold" style={{ color: "var(--foreground)" }}>
                   {current.name}
