@@ -243,7 +243,13 @@ export default function RunPage({
           ← Back
         </Link>
         <div className="flex items-center gap-2">
-   
+          <button
+            className="fa-cta rounded-full px-3 py-1 text-sm"
+            onClick={() => setEnabled((s) => !s)}
+            aria-pressed={enabled}
+          >
+            {enabled ? "Voice On" : "Voice Off"}
+          </button>
           <button
             className="fa-cta rounded-full px-3 py-1 text-sm"
             onClick={() => setPaused((s) => !s)}
@@ -270,8 +276,11 @@ export default function RunPage({
           <div className="fa-tile p-4 md:p-6 flex flex-col items-center text-center">
             <div className="relative w-full aspect-[4/3] max-w-xl">
               <Image
-                src={current.image || "/placeholder.svg?height=400&width=600&query=exercise%20image"}
-                alt={current.name}
+                src={
+                  (phase === "rest" ? nextOne?.image || current?.image || "" : current?.image || "") ||
+                  "/placeholder.svg?height=400&width=600&query=exercise%20image"
+                }
+                alt={phase === "rest" ? nextOne?.name || current?.name || "exercise" : current?.name || "exercise"}
                 fill
                 className="object-cover rounded-xl"
                 sizes="(max-width:768px) 100vw, 800px"
@@ -374,13 +383,13 @@ export default function RunPage({
       )}
 
       {/* Global bottom Pause/Resume button */}
-      <div className="fixed bottom-4 cursor-pointer left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 md:px-8">
+      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 md:px-8">
         <button
-          className="fa-tile w-full px-5 py-3 font-bold  rounded-full"
+          className="fa-tile w-full px-5 py-3 rounded-full"
           onClick={() => setPaused((p) => !p)}
           aria-pressed={paused}
         >
-         <p className="border-b mx-auto w-fit border-black"> {paused ? "Resume" : "Pause"}</p>
+          {paused ? "Resume" : "Pause"}
         </button>
       </div>
     </main>
