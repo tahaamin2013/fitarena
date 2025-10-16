@@ -242,7 +242,26 @@ export function getWorkout(category: string): Exercise[] {
         image: "/fullballrotation.gif",
       },
       
+                                   {
+        id: "keep-looking-up",
+        name: "Keep Looking Up",
+        duration: 120,
 
+        image: "/keeplookingup.gif",
+      },
+      
+      
+                                   {
+        id: "open-space-dribbling",
+        name: "Open-space free dribbling with changes of pace",
+        duration: 120,
+
+        image: "/openspacedribbling.gif",
+      },
+      
+
+
+  
 
 
 
