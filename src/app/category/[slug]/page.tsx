@@ -37,6 +37,8 @@ export default function CategoryPlanPage({
               alt={`${category.title} cover`}
               fill
               priority
+unoptimized
+
               sizes="100vw"
               className="object-cover"
             />
@@ -73,6 +75,8 @@ export default function CategoryPlanPage({
                     }
                     alt={ex.name}
                     fill
+                       priority
+unoptimized
                     sizes="(max-width:768px) 33vw, 200px"
                     className="object-cover"
                   />
