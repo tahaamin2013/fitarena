@@ -95,6 +95,8 @@ export default function RunPage({
   const [phase, setPhase] = useState<Phase>("setup")
   const [remaining, setRemaining] = useState(10)
   const [restLeft, setRestLeft] = useState(10)
+  const [paused, setPaused] = useState(false)
+  const pausedRef = useRef(false)
   const { /* voices, */ voice, /* setVoice, */ enabled, setEnabled, speak, cancel } = useSpeechWithMarkDefault()
 
   const current: Exercise | null = all[idx] ?? null
@@ -108,6 +110,7 @@ export default function RunPage({
     if (phase === "setup") {
       setRemaining(10)
       interval = setInterval(() => {
+        if (pausedRef.current) return
         setRemaining((s) => {
           if (s <= 1) {
             clearInterval(interval)
@@ -124,6 +127,7 @@ export default function RunPage({
 
       const startTicking = () => {
         interval = setInterval(() => {
+          if (pausedRef.current) return
           setRemaining((s) => {
             if (s <= 1) {
               clearInterval(interval)
@@ -146,6 +150,7 @@ export default function RunPage({
 
     if (phase === "rest") {
       interval = setInterval(() => {
+        if (pausedRef.current) return
         setRestLeft((s) => {
           if (s <= 1) {
             clearInterval(interval)
@@ -205,11 +210,17 @@ export default function RunPage({
 
   useEffect(() => {
     if (phase !== "exercise") return
+    if (paused) return
     if (Date.now() < numberStartAtRef.current) return
     if (remaining <= 0) return
     speak(String(remaining), { rate: 1.05 })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [remaining, phase])
+  }, [remaining, phase, paused])
+
+  useEffect(() => {
+    pausedRef.current = paused
+    if (paused) cancel()
+  }, [paused, cancel])
 
   function skipRest() {
     setIdx((i) => Math.min(i + 1, all.length - 1))
@@ -232,12 +243,13 @@ export default function RunPage({
           ← Back
         </Link>
         <div className="flex items-center gap-2">
+   
           <button
             className="fa-cta rounded-full px-3 py-1 text-sm"
-            onClick={() => setEnabled((s) => !s)}
-            aria-pressed={enabled}
+            onClick={() => setPaused((s) => !s)}
+            aria-pressed={paused}
           >
-            {enabled ? "Voice On" : "Voice Off"}
+            {paused ? "Resume" : "Pause"}
           </button>
         </div>
       </header>
@@ -263,9 +275,7 @@ export default function RunPage({
                 fill
                 className="object-cover rounded-xl"
                 sizes="(max-width:768px) 100vw, 800px"
-        
-                   priority
-unoptimized
+                priority
               />
             </div>
 
@@ -362,6 +372,17 @@ unoptimized
           </div>
         </section>
       )}
+
+      {/* Global bottom Pause/Resume button */}
+      <div className="fixed bottom-4 cursor-pointer left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 md:px-8">
+        <button
+          className="fa-tile w-full px-5 py-3 font-bold  rounded-full"
+          onClick={() => setPaused((p) => !p)}
+          aria-pressed={paused}
+        >
+         <p className="border-b mx-auto w-fit border-black"> {paused ? "Resume" : "Pause"}</p>
+        </button>
+      </div>
     </main>
   )
 }
