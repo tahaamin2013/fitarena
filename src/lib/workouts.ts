@@ -244,6 +244,110 @@ export function getWorkout(category: string): Exercise[] {
 
         image: "/sweeppassdrill.gif",
       },
+                                      {
+        id: "lateral-hops",
+        name: "Lateral Hops",
+        duration: 120,
+
+        image: "/lateralhops.gif",
+      },
+
+                                {
+        id: "lateral-hops-with-floor-touch",
+        name: "Lateral Hops with Floor Touch",
+        duration: 120,
+
+        image: "/lateralhopsfloor.gif",
+      },
+
+
+                                {
+        id: "single-leg-lateral-hop",
+        name: "Single-Leg Lateral Hop",
+        duration: 120,
+
+        image: "/singleleglateralhop.gif",
+      },
+
+                                {
+        id: "side-to-side-hop",
+        name: "Side-to-Side Hop",
+        duration: 120,
+
+        image: "/side-to-side-hop.gif",
+      },
+
+                                {
+        id: "pogo-hop-single-leg",
+        name: "Pogo Hop (Single Leg)",
+        duration: 120,
+
+        image: "/pogo-hop-single-leg.gif",
+      },
+
+                                {
+        id: "high-knees-walking-pogo-hop",
+        name: "High Knees Walking + Pogo Hop",
+        duration: 120,
+
+        image: "/high-knees-walking-pogo-hop.gif",
+      },
+
+                                {
+        id: "high-knees-walk",
+        name: "High Knees Walk",
+        duration: 120,
+
+        image: "/high-knees-walk.gif",
+      },
+
+
+                          {
+        id: "cod-drill",
+        name: "COD drill",
+        duration: 120,
+
+        image: "/cod-drill.gif",
+      },
+
+                       {
+        id: "standing-quad-stretch",
+        name: "Stretch of the Day - Standing Quad Stretch",
+        duration: 120,
+
+        image: "/standing-quad-stretch.gif",
+      },
+                       {
+        id: "levator-scapulae-stretch",
+        name: "Levator Scapulae Stretch",
+        duration: 120,
+
+        image: "/levator-scapulae-stretch.gif",
+      },
+                       {
+        id: "upper-trapezius-stretch",
+        name: "Upper Trapezius Stretch",
+        duration: 120,
+
+        image: "/upper-trapezius-stretch.gif",
+      },
+                          {
+        id: "towel-rotation-stretch",
+        name: "Towel rotation Stretch",
+        duration: 120,
+
+        image: "/towel-rotation-stretch.gif",
+      },
+     
+
+
+
+
+
+      
+
+
+
                                        {
         id: "full-ball-rotation",
         name: "Full Ball Rotation",
