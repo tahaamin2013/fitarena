@@ -121,18 +121,19 @@ export function getWorkout(category: string): Exercise[] {
         duration: 60,
         image: "/legf.gif",
       },
-           {
-        id: "jump-rope",
-        name: "Jump Rope",
-        duration: 60,
-        image: "/jumprope.gif",
-      },
+     
          {
         id: "plasnk-right",
         name: "Forward Leg Swings Right",
         duration: 60,
        
         image: "/legf.gif",
+      },
+            {
+        id: "jump-rope",
+        name: "Jump Rope",
+        duration: 60,
+        image: "/jumprope.gif",
       },
       {
         id: "lateral-leg-swings-left",
@@ -268,6 +269,18 @@ export function getWorkout(category: string): Exercise[] {
                                   {
         id: "push-pass-in-pairs",
         name: "Push pass in pairs, 2 m apart",
+        duration: 120,
+
+        image: "/pushpassdrill.gif",
+      },
+      
+
+
+
+      
+                                  {
+        id: "4-cone-box-drill-backpedal-sprint",
+        name: "4 Cone Box Drill (Backpedal - Sprint)",
         duration: 120,
 
         image: "/pushpassdrill.gif",
