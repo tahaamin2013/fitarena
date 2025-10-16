@@ -180,6 +180,15 @@ export function getWorkout(category: string): Exercise[] {
 
         image: "/hipcircles.gif",
       },
+
+
+      {
+        id: "push-ups",
+        name: "Push ups",
+        duration: 60,
+
+        image: "/pushups.gif",
+      },
      
                       {
         id: "standing-hip-opener",
@@ -197,13 +206,7 @@ export function getWorkout(category: string): Exercise[] {
       },
       
 
-                          {
-        id: "dribble-jog",
-        name: "Dribble Jog",
-        duration: 120,
-
-        image: "/dribblejog.gif",
-      },
+   
                                 {
         id: "straight-dribble",
         name: "Straight dribble ",

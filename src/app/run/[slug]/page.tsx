@@ -200,22 +200,51 @@ export default function RunPage({
   }, [phase, idx, slug])
 
   const numberStartAtRef = useRef<number>(0)
+  const initialDurationRef = useRef<number>(0)
+  const lastSpokenRef = useRef<string | null>(null)
+
   useEffect(() => {
-    if (phase === "exercise") {
+    if (phase === "exercise" && current) {
       numberStartAtRef.current = Date.now() + 3000
+      initialDurationRef.current = current.duration
+      lastSpokenRef.current = null
     } else {
       numberStartAtRef.current = Number.MAX_SAFE_INTEGER
     }
-  }, [phase, idx])
+  }, [phase, idx]) // keep same deps
 
   useEffect(() => {
     if (phase !== "exercise") return
     if (paused) return
     if (Date.now() < numberStartAtRef.current) return
     if (remaining <= 0) return
-    speak(String(remaining), { rate: 1.05 })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [remaining, phase, paused])
+
+    const init = initialDurationRef.current
+
+    // For durations above 60s: announce on each full-minute boundary
+    if (init > 60) {
+      if (remaining % 60 === 0) {
+        const minutes = Math.floor(remaining / 60)
+        const key = `m-${minutes}`
+        if (minutes > 0 && lastSpokenRef.current !== key) {
+          void speak(`${minutes} minute${minutes === 1 ? "" : "s"} remaining`, { rate: 1.02 })
+          lastSpokenRef.current = key
+        }
+      }
+      return
+    }
+
+    // For exactly 60s: announce once at 40s remaining (after 20s have elapsed)
+    if (init === 60) {
+      if (remaining === 40 && lastSpokenRef.current !== "s-40") {
+        void speak(`40 seconds remaining`, { rate: 1.05 })
+        lastSpokenRef.current = "s-40"
+      }
+      return
+    }
+
+    // Otherwise (below 60s) keep quiet to avoid per-second spam (no-op)
+  }, [remaining, phase, paused, speak])
 
   useEffect(() => {
     pausedRef.current = paused
@@ -308,7 +337,7 @@ export default function RunPage({
                   {current.name}
                 </h2>
                 <div className="mt-4 fa-cta inline-flex items-center justify-center rounded-full w-16 h-16 text-2xl">
-                  {remaining}
+                  {current.duration > 60 ? Math.ceil(remaining / 60) : remaining}
                 </div>
                 <div className="mt-4 flex items-center gap-3">
                   <button
