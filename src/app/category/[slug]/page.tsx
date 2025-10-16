@@ -78,7 +78,7 @@ export default function CategoryPlanPage({
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="font-semibold text-foreground truncate">{ex.name}</div>
+                  <div className="font-semibold text-foreground truncate w-[220px] sm:w-full">{ex.name}</div>
                   <div className="text-xs text-muted-foreground">00:{String(ex.duration).padStart(2, "0")}</div>
                 </div>
               </Link>

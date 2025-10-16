@@ -121,6 +121,12 @@ export function getWorkout(category: string): Exercise[] {
         duration: 60,
         image: "/legf.gif",
       },
+           {
+        id: "jump-rope",
+        name: "Jump Rope",
+        duration: 60,
+        image: "/jumprope.gif",
+      },
          {
         id: "plasnk-right",
         name: "Forward Leg Swings Right",
@@ -258,6 +264,14 @@ export function getWorkout(category: string): Exercise[] {
 
         image: "/openspacedribbling.gif",
       },
+
+                                  {
+        id: "push-pass-in-pairs",
+        name: "Push pass in pairs, 2 m apart",
+        duration: 120,
+
+        image: "/pushpassdrill.gif",
+      },
       
 
 
@@ -288,13 +302,85 @@ export function getWorkout(category: string): Exercise[] {
 
         image: "/hitpass.gif",
       },
-                                    {
-        id: "hit-pass",
-        name: "The Trap",
+                                  {
+        id: "hook-block-tackle-practice",
+        name: "Hook + Block Tackle Practice",
         duration: 600,
 
-        image: "/thetrap.gif",
+        image: "/hookblocktacklepractice.gif",
       },
+                                 {
+        id: "block-tackle-jab",
+        name: "block tackle + jab + reverse tackle",
+        duration: 600,
+
+        image: "/blocktacklejabreversetackle.gif",
+      },
+    
+                                   {
+        id: "moving-pass-receive",
+        name: "Moving pass & receive",
+        duration: 600,
+
+        image: "/movingpassreceive.gif",
+      },
+    
+                             {
+        id: "receive-stationary-pass-with-soft-hands",
+        name: "Receive stationary pass with soft hands",
+        duration: 600,
+
+        image: "/receivestationarypasswithsofthands.gif",
+      },
+
+                                 {
+        id: "tackling-drill-number-1",
+        name: "Tackling Drill number 1  ",
+        duration: 600,
+
+        image: "/tacklingdrillnumber1.gif",
+      },
+                                     {
+        id: "flat-stick-tackle-on-rolling-ball",
+        name: "Flat stick tackle on rolling ball",
+        duration: 600,
+
+        image: "/flatsticktackleonrollingball.gif",
+      },
+                                {
+        id: "left-hand-keep-ups",
+        name: "Left Hand Keep Ups",
+        duration: 600,
+
+        image: "/lefthandkeepups.gif",
+      },
+
+                            {
+        id: "stopping-exercise",
+        name: "Stopping Exercise",
+        duration: 600,
+
+        image: "/stoppingexercise.gif",
+      },
+    
+
+                          {
+        id: "agility-zig-zag-drill",
+        name: "Agility Zig Zag Drill",
+        duration: 600,
+
+        image: "/agilityzigzagdrill.gif",
+      },
+
+                      {
+        id: "cone-sprints",
+        name: "Cone sprints",
+        duration: 600,
+
+        image: "/conesprints.gif",
+      },
+    
+
                                     {
         id: "shooting",
         name: "Shooting",
