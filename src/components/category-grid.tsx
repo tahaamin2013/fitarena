@@ -6,7 +6,7 @@ import { CATEGORIES } from "@/lib/categories"
 
 export function CategoryGrid() {
   return (
-    <div className="grid grid-cols-2 mx-auto px-10 md:grid-cols-3 gap-4 md:gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 mx-auto px-10 md:grid-cols-3 gap-4 md:gap-6">
       {CATEGORIES.map((c) => (
         <Link
           key={c.slug}
