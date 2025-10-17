@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { getWorkout } from "@/lib/workouts"
 import { CATEGORIES } from "@/lib/categories"
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft } from "lucide-react"
 
 export default function CategoryPlanPage({
   params,
@@ -16,16 +16,16 @@ export default function CategoryPlanPage({
   return (
     <main className="min-h-dvh bg-background">
       {/* Header */}
- <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black/70 to-transparent px-4 md:px-8 py-4 flex items-center">
-      <Link
-        href="/"
-        className="inline-flex items-center gap-2 text-white hover:opacity-80 transition-opacity"
-        aria-label="Back to home"
-      >
-        <ChevronLeft className="w-5 h-5 stroke-current" aria-hidden="true" />
-        <span>Back</span>
-      </Link>
-    </header>
+      <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black/70 to-transparent px-4 md:px-8 py-4 flex items-center">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-white hover:opacity-80 transition-opacity"
+          aria-label="Back to home"
+        >
+          <ChevronLeft className="w-5 h-5 stroke-current" aria-hidden="true" />
+          <span>Back</span>
+        </Link>
+      </header>
       {/* Cover */}
       <div className="relative h-48 md:h-64">
         {category ? (
@@ -37,9 +37,7 @@ export default function CategoryPlanPage({
               alt={`${category.title} cover`}
               fill
               priority
-unoptimized
-
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, 1200px"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
@@ -75,14 +73,12 @@ unoptimized
                     }
                     alt={ex.name}
                     fill
-                       priority
-unoptimized
-                    sizes="(max-width:768px) 33vw, 200px"
+                    sizes="(max-width: 768px) 80px, 96px"
                     className="object-cover"
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="font-semibold text-foreground truncate w-[220px] sm:w-full">{ex.name}</div>
+                  <div className="font-semibold text-foreground truncate w-[150px] md:w-full">{ex.name}</div>
                   <div className="text-xs text-muted-foreground">00:{String(ex.duration).padStart(2, "0")}</div>
                 </div>
               </Link>
