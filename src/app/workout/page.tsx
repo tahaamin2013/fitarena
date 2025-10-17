@@ -394,6 +394,7 @@ export default function WorkoutRunnerPage() {
                         src={next.asset || "/images/exercise-running.jpeg"}
                         alt={`${next.name} preview`}
                         className="h-16 w-16 object-contain"
+                        
                       />
                       <p className="text-xs md:text-sm text-muted-foreground">Get ready for the next movement.</p>
                     </div>

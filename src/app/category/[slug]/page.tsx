@@ -37,6 +37,7 @@ export default function CategoryPlanPage({
               alt={`${category.title} cover`}
               fill
               priority
+              loading="eager"
               sizes="(max-width: 768px) 100vw, 1200px"
               className="object-cover"
             />

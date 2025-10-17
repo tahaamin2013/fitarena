@@ -314,6 +314,8 @@ export default function RunPage({
                 className="object-cover rounded-xl"
                 sizes="(max-width:768px) 100vw, 800px"
                 priority
+          
+              loading="eager"
               />
             </div>
 
