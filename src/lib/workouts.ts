@@ -157,94 +157,7 @@ export function getWorkout(category: string): Exercise[] {
         image: "/leg-openers.gif",
       },
   
-
-
-        {
-        id: "arm-circles",
-        name: "Arm Circles",
-        duration: 60,
-       
-        image: "/armcircles.gif",
-      },
-           {
-        id: "side-lunges",
-        name: "Side Lunges",
-        duration: 60,
-       
-        image: "/sidelungs.gif",
-      },
-               {
-        id: "hip-circles",
-        name: "Hip Circles",
-        duration: 60,
-
-        image: "/hipcircles.gif",
-      },
-
-
-      {
-        id: "push-ups",
-        name: "Push ups",
-        duration: 60,
-
-        image: "/pushups.gif",
-      },
-     
-                      {
-        id: "standing-hip-opener",
-        name: "Standing Hip Opener Left",
-        duration: 60,
-
-        image: "/standinghipopner.gif",
-      },
-                        {
-        id: "standing-hip-opener",
-        name: "Standing Hip Opener Right",
-        duration: 60,
-
-        image: "/standinghipopner.gif",
-      },
-      
-
-   
-                                {
-        id: "straight-dribble",
-        name: "Straight dribble ",
-        duration: 120,
-
-        image: "/dribblejog.gif",
-      },
-
-                                    {
-        id: "straight-dribble",
-        name: "Zig Zag Dribble",
-        duration: 120,
-
-        image: "/straightdribble.gif",
-      },
-                                    {
-        id: "push-pass-drill-1",
-        name: "Push Pass Drill 1",
-        duration: 120,
-
-        image: "/puspassdrill1.gif",
-      },
-                                     {
-        id: "push-pass-drill-2",
-        name: "Push Pass Drill 2",
-        duration: 120,
-
-        image: "/puspassdrill2.gif",
-      },
-      
-                                       {
-        id: "sweep-pass-drill",
-        name: "Sweep Pass Drill",
-        duration: 120,
-
-        image: "/sweeppassdrill.gif",
-      },
-                                      {
+                                  {
         id: "lateral-hops",
         name: "Lateral Hops",
         duration: 120,
@@ -339,6 +252,93 @@ export function getWorkout(category: string): Exercise[] {
         image: "/towel-rotation-stretch.gif",
       },
      
+
+        {
+        id: "arm-circles",
+        name: "Arm Circles",
+        duration: 60,
+       
+        image: "/armcircles.gif",
+      },
+           {
+        id: "side-lunges",
+        name: "Side Lunges",
+        duration: 60,
+       
+        image: "/sidelungs.gif",
+      },
+               {
+        id: "hip-circles",
+        name: "Hip Circles",
+        duration: 60,
+
+        image: "/hipcircles.gif",
+      },
+
+
+      {
+        id: "push-ups",
+        name: "Push ups",
+        duration: 60,
+
+        image: "/pushups.gif",
+      },
+     
+                      {
+        id: "standing-hip-opener",
+        name: "Standing Hip Opener Left",
+        duration: 60,
+
+        image: "/standinghipopner.gif",
+      },
+                        {
+        id: "standing-hip-opener",
+        name: "Standing Hip Opener Right",
+        duration: 60,
+
+        image: "/standinghipopner.gif",
+      },
+      
+
+   
+                                {
+        id: "straight-dribble",
+        name: "Straight dribble ",
+        duration: 120,
+
+        image: "/dribblejog.gif",
+      },
+
+                                    {
+        id: "straight-dribble",
+        name: "Zig Zag Dribble",
+        duration: 120,
+
+        image: "/straightdribble.gif",
+      },
+                                    {
+        id: "push-pass-drill-1",
+        name: "Push Pass Drill 1",
+        duration: 120,
+
+        image: "/puspassdrill1.gif",
+      },
+                                     {
+        id: "push-pass-drill-2",
+        name: "Push Pass Drill 2",
+        duration: 120,
+
+        image: "/puspassdrill2.gif",
+      },
+      
+                                       {
+        id: "sweep-pass-drill",
+        name: "Sweep Pass Drill",
+        duration: 120,
+
+        image: "/sweeppassdrill.gif",
+      },
+    
 
 
 
