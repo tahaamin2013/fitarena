@@ -251,6 +251,13 @@ export function getWorkout(category: string): Exercise[] {
 
         image: "/towel-rotation-stretch.gif",
       },
+                         {
+        id: "the-trap",
+        name: "The Trap",
+        duration: 120,
+
+        image: "/thetrap.gif",
+      },
      
 
         {
