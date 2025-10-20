@@ -251,6 +251,18 @@ export function getWorkout(category: string): Exercise[] {
 
         image: "/towel-rotation-stretch.gif",
       },
+
+   
+                         {
+        id: "tap-pass-trap-receiving",
+        name: "Tap Pass & Trap Receiving",
+        duration: 120,
+
+        image: "/tap-pass-trap-receiving.gif",
+      },
+     
+      
+      
                          {
         id: "the-trap",
         name: "The Trap",
@@ -259,6 +271,7 @@ export function getWorkout(category: string): Exercise[] {
         image: "/thetrap.gif",
       },
      
+      
 
         {
         id: "arm-circles",
